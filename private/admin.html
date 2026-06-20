@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <header>
+        <nav>
+             <img
+          src="../images/ChatGPT_Image_Jan_16__2026__09_27_58_AM-removebg-preview (1).png"
+          alt="logo"
+          class="logo"
+        />
+         <ul class="real">
+          <li><a href="../homepage.html">Home</a></li>
+          <li><a href="../homepage.html#two">About</a></li>
+          <li><a href="../poem.html">Exibition</a></li>
+          <li><a href="control.html">control room</a></li>
+        </ul>
+         <div id="dropdown">
+          <img id="menu" src="../images/menu.png" alt="menu" />
+        </div>
+      </nav>
+      <div class="dropdown-box">
+        <ul>
+          <li><a href="../homepage.html">Home</a></li>
+          <li><a href="../homepage.html#two">About</a></li>
+          <li><a href="../poem.html">Poems</a></li>
+          <li><a href="control.html">Control room</a></li>
+        </ul>
+      </div>
+        </nav>
+        <div class="container">
+            <form action="POST">
+                <h1>Post poems here</h1>
+                <input placeholder="Enter Title Here" id="title" type="text">
+                <textarea placeholder="Content.." name="text" id="content"></textarea>
+                <input type="file" name="file" id="file">
+                <select name="select" id="select">
+                    <option value="Life">Life</option>
+                    <option value="Love">Love</option>
+                    <option value="Earth">Earth</option>
+                    <option value="Emotions">Emotions</option>
+                </select>
+                  <button id="submit-btn">Upload.</button>
+                  <p style="text-align: center; font-family: sec; font-size: 18px; padding-top: 5px;" class="status"></p>
+            </form>
+    
+        </div>
+        <div class="loader-con">
+           <div id="loader"></div>
+        </div>
+      
+    </header>
+    <script src="admin.js"></script>
+  </body>
+</html>

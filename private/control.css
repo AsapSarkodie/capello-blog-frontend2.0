@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+#main {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+.main-box {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+}
+#post-btn {
+  padding-left: 14px;
+  padding-right: 14px;
+  margin-right: 9px;
+  font-size: 17px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-color: rgb(79, 79, 175);
+  border: none;
+}
+.poemImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+}
+.mail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  z-index: 200;
+}
+
+.mail-item {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  background: #1a1d23;
+  padding: 14px 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+  border: 1px solid var(--divider);
+  margin-left: 2px;
+  margin-right: 2px;
+  max-width: 700px;
+}
+
+.mail-item:hover {
+  background: #22262e;
+  transform: translateY(-1px);
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #2a2e36;
+  flex-shrink: 0;
+}
+
+.mail-content {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.sender {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.preview {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.trash {
+  color: white;
+}
+.p-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.prompt {
+  display: none;
+  width: 200px;
+  height: 150px;
+  background: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 5px 5px rgba(106, 106, 106, 0.316);
+  border-radius: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.prompt h2 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.yes-btn {
+  width: 50px;
+  height: 30px;
+  margin-right: 15px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+.no-btn {
+  width: 50px;
+  height: 30px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+.prompt.active {
+  display: block;
+}
+.edit-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.edit-box {
+  width: 280px;
+  height: auto;
+  background: #1a1d23;
+  padding-bottom: 20px;
+  padding-left: 32px;
+  z-index: 1000;
+  display: none;
+  padding-top: 10px;
+  box-shadow: 5px 5px 5px 5px rgba(170, 169, 169, 0.4);
+  position: fixed;
+  top: 0;
+  margin-top: 70px;
+}
+.edit-box h2 {
+  text-align: center;
+  padding-bottom: 10px;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.edit-box input {
+  width: 85%;
+  max-width: 300px;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+.edit-box textarea {
+  margin-top: 15px;
+  width: 85%;
+  height: 150px;
+  max-width: 600px;
+  padding: 5px;
+  background: transparent;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  margin-bottom: 5px;
+}
+label {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+#done-btn {
+  display: block;
+  width: 35%;
+  height: 30px;
+  font-size: 17px;
+  cursor: pointer;
+  background-color: #2f6bff;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  border: none;
+}
+
+.edit-box.appear {
+  display: block;
+}

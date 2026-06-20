@@ -1,0 +1,388 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: bubble;
+  src: url(fonts/TitilliumWeb-BoldItalic.ttf);
+}
+@font-face {
+  font-family: sec;
+  src: url(fonts/TitilliumWeb-Light.ttf);
+}
+#poempage {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+nav {
+  width: 100%;
+  height: 70px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 5px 6px 5px rgba(122, 122, 122, 0.055);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  padding-left: 50px;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sec;
+  color: black;
+}
+#menu {
+  width: 40px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.real {
+  display: none;
+}
+
+.dropdown-box {
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  margin-top: 69px;
+  padding-left: 5px;
+  transform: translateY(-123px);
+  transition: 0.3s linear;
+  box-shadow: 5px 5px 5px #5991cc59;
+  z-index: 3;
+  position: fixed;
+}
+.dropdown-box.toggle {
+  height: 145px;
+  transform: translateY(1px);
+}
+.dropdown-box ul {
+  list-style: none;
+}
+.dropdown-box ul li {
+  padding-bottom: 5px;
+}
+.dropdown-box ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sec;
+  color: black;
+}
+.dropdown-box ul li a:hover {
+  color: #5991cc;
+}
+.logo {
+  width: 160px;
+}
+.words {
+  padding-top: 95px;
+  text-align: center;
+}
+.words h1 {
+  font-family: bubble;
+}
+.words p {
+  font-family: sec;
+}
+.filter-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12px;
+}
+.filter-box button {
+  margin-left: 5px;
+  width: 75px;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 1px solid #5991cc;
+  color: #5991cc;
+  background: transparent;
+  transition: 0.3s ease-in-out;
+}
+.filter-box button.active-btn {
+  border: none;
+  color: white;
+  background: #5991cc;
+  transition: 0.3s ease-in-out;
+}
+.filter-box button:hover {
+  transform: scale(0.9);
+}
+
+.poem-box {
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+.card {
+  width: 310px;
+  height: auto;
+  background: transparent;
+  padding-bottom: 27px;
+  padding-left: 5px;
+  border: 1px solid #5991cc78;
+  overflow: hidden;
+  margin-bottom: 15px;
+  background-color: white;
+  box-shadow: 5px 5px 5px #5991cc39;
+  transition: 0.5s ease-in;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.recent-img {
+  width: 100%;
+  transition: 0.5s ease-out;
+}
+.recent-img:hover {
+  transform: scale(1.1);
+}
+.conn {
+  width: 315px;
+  height: 200px;
+  overflow: hidden;
+  margin-left: -5px;
+}
+.content-r {
+  font-size: 17px;
+  font-family: sec;
+  padding: 6px;
+}
+.title-r {
+  font-family: bubble;
+}
+.category-r {
+  font-family: sec;
+  color: #2b4664;
+  font-size: 12px;
+  padding-top: 5px;
+}
+.poem-info {
+  text-align: center;
+  position: absolute;
+  font-family: bubble;
+}
+.n-img {
+  width: 220px;
+  margin-top: 50px;
+}
+.center {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.not-available {
+  display: flex;
+  justify-content: center;
+}
+
+/* responsive with nav bar */
+@media screen and (min-width: 757px) {
+  .real {
+    display: flex;
+    padding-right: 20px;
+  }
+  .real li a:hover {
+    color: #5991cc;
+  }
+  #dropdown {
+    display: none;
+  }
+  .content h1 {
+    font-size: 6rem;
+  }
+  .logo {
+    margin-left: 20px;
+  }
+  /*card container*/
+  .poem-box {
+    display: grid;
+    grid-template-columns: repeat(2, 359px);
+    gap: 20px;
+  }
+  .card {
+    width: 350px !important;
+    height: auto;
+  }
+  .recent-img {
+    width: 100%;
+  }
+  .conn {
+    width: 360px;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 882px) {
+  .poem-box {
+    display: grid;
+    grid-template-columns: repeat(2, 359px);
+    gap: 30px;
+  }
+  .card {
+    width: 360px !important;
+    height: auto;
+  }
+}
+@media screen and (min-width: 888px) {
+  .n-img {
+    width: 420px;
+    margin-top: 50px;
+    margin-left: 70px;
+  }
+  .poem-info {
+    text-align: center;
+    font-size: 50px;
+  }
+  .poem-box {
+    display: grid;
+    grid-template-columns: repeat(2, 359px);
+    gap: 40px;
+  }
+  .card {
+    width: 370px !important;
+    height: auto;
+  }
+  .recent-img {
+    width: 100% !important;
+  }
+  .conn {
+    width: 380px !important;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .poem-box {
+    display: grid;
+    grid-template-columns: repeat(2, 359px);
+    gap: 50px;
+  }
+  .card {
+    width: 380px !important;
+    height: auto;
+  }
+  .recent-img {
+    width: 100% !important;
+  }
+  .conn {
+    width: 390px !important;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .poem-box {
+    display: grid;
+    grid-template-columns: repeat(2, 359px);
+    gap: 60px;
+  }
+  .card {
+    width: 360px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .poem-box {
+    display: grid;
+    grid-template-columns: repeat(3, 359px);
+    gap: 60px;
+  }
+  .card {
+    width: 360px;
+    height: auto;
+  }
+  footer .last ul {
+    padding-top: 60px !important;
+    text-align: center;
+  }
+  footer .last ul li {
+    padding-bottom: 5px;
+    padding-left: 20px;
+  }
+  footer {
+    height: 57vh;
+  }
+}
+
+@media screen and (min-width: 437px) {
+  #two {
+    height: 59vh !important;
+    overflow: hidden;
+  }
+
+  .card {
+    width: 310px;
+    height: auto;
+    background: transparent;
+    padding-bottom: 27px;
+    padding-left: 5px;
+    border: 1px solid #5991cc78;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background-color: white;
+  }
+}
+@media screen and (min-width: 527px) {
+  body {
+    overflow-x: hidden;
+  }
+  .card {
+    width: 350px;
+    height: auto;
+  }
+  .recent-img {
+    width: 100%;
+  }
+  .conn {
+    width: 360px;
+    height: 200px;
+  }
+  .form input {
+    width: 90%;
+  }
+  .form button {
+    width: 93.7%;
+    height: 40px;
+  }
+  footer .last ul {
+    padding-top: 20px;
+  }
+  footer .last ul li {
+    padding-bottom: 5px;
+    padding-left: 10px;
+  }
+  footer {
+    height: 57vh;
+  }
+}
+@media screen and (min-width: 664px) {
+  body {
+    overflow-x: hidden;
+  }
+  #two {
+    height: 55vh !important;
+    overflow: hidden;
+  }
+  .poem-box {
+    display: grid;
+  }
+  .card {
+    width: 360px;
+    height: auto;
+  }
+  .recent-img {
+    width: 100% !important;
+  }
+  .conn {
+    width: 370px;
+    height: 200px;
+  }
+}

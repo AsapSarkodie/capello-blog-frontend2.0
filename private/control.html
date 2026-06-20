@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>control room</title>
+    <link rel="stylesheet" href="control.css" />
+  </head>
+  <body>
+    <section id="main">
+      <div class="main-box">
+        <h1>Admin room</h1>
+        <button id="post-btn">post</button>
+      </div>
+
+      <div class="poem-container"></div>
+    </section>
+    <div class="edit-con">
+      <div class="edit-box">
+        <h2>Edit poem</h2>
+        <label for="edit-title">Title</label>
+        <input name="edit-title" id="edit-title" type="text" />
+        <label for="content">content</label>
+        <textarea name="content" id="edit-textarea"></textarea>
+        <button id="done-btn">Done</button>
+      </div>
+    </div>
+    <div class="p-con">
+      <div class="prompt">
+        <h2>Are you sure?</h2>
+        <div class="con">
+          <button class="yes-btn" id="btn">yes</button
+          ><button class="no-btn" id="btn">no</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="control.js"></script>
+  </body>
+</html>
