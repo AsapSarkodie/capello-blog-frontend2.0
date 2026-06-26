@@ -130,12 +130,11 @@ form.addEventListener("submit", async (e) => {
   }
 });
 
-//sign in logic
 
+//LogIn Logic to generate and save token
 const signInForm = document.querySelector("#in-form");
 signInForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  //get elements from the html file
   const signInEmail = document.querySelector("#email-in");
   const signInPassword = document.querySelector("#password-in");
 
@@ -149,7 +148,7 @@ signInForm.addEventListener("submit", async (e) => {
       "https://58xknscq-5000.uks1.devtunnels.ms/auth/login",
       {
         method: "POST",
-        credentials: "include",
+        credentials: "include", //learn about this
         headers: {
           "content-Type": "application/json",
         },
@@ -158,7 +157,7 @@ signInForm.addEventListener("submit", async (e) => {
     );
     //get response and save it to be sent later
     let response = await signIn.json();
-    console.log(response);
+    // console.log(response); contains token
 
     const token = response.token;
 
@@ -178,34 +177,13 @@ signInForm.addEventListener("submit", async (e) => {
 
 let adminLink = document.querySelector("#admin-page");
 
-/*adminLink.addEventListener("click", async () => {
-  let token = localStorage.getItem("mainToken");
-  const getAdmin = await fetch(
-    `https://58xknscq-5000.uks1.devtunnels.ms/auth/admin`,
-    {
-      method: "POST",
-      headers: {
-        "content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    },
-  );
-
-  if (getAdmin.ok) {
-    window.location.href =
-      "https://58xknscq-5000.uks1.devtunnels.ms/auth/admin-page";
-  } else {
-    alert("Access denied");
-    console.log(getAdmin.json());
-  }
-}); */
-
 adminLink.addEventListener("click", () => {
   window.location.href =
     "https://58xknscq-5000.uks1.devtunnels.ms/auth/admin-page";
 });
-//login in
 
+
+//Authentication Section
 let Link = document.querySelectorAll("#link");
 let signIn = document.querySelector("#in-form");
 let signUp = document.querySelector("#up-form");
