@@ -282,7 +282,9 @@ nav ul li a {
   max-width: 500px;
   height: auto;
   background: white;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+  border-radius: 12px;
+   box-sizing: border-box;
 }
 .form.show {
   display: block;
@@ -298,6 +300,7 @@ nav ul li a {
   font-family: bubble;
   padding-left: 13px;
   padding-top: 12px;
+  font-size: 18px;
 }
 .form-top {
   display: flex;
@@ -308,7 +311,7 @@ nav ul li a {
   color: #5991cc;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
   padding-right: 15px;
 }
 .form h2 span {
@@ -336,7 +339,10 @@ nav ul li a {
   color: white;
   margin-left: 13px;
   border: none;
-}
+  margin-top: 0.5rem;
+  border-radius: 9px;
+  box-shadow: 0 4px 12px rgba(89, 145, 204, 0.3);
+} 
 footer {
   width: 100%;
   height: 60vh;
